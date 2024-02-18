@@ -10,4 +10,7 @@ figures:
 
 full: figures all
 
-.PHONY: all clean figures full
+storyboard:
+	typst compile storyboard.typ storyboard.pdf
+
+.PHONY: all clean figures full storyboard

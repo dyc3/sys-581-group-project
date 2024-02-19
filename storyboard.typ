@@ -55,4 +55,35 @@
 	]
 ]
 
+#polylux-slide[
+	= System Concept
+	Queue based message passing system
 
+	#only(1)[
+		- "Slow Internet"
+		- Messages are stored in a queue until next hop is available
+		- Nodes can be added or removed from network, routing is dynamic
+	]
+	#only(2)[
+		#set text(size: 18pt)
+		#grid(
+			columns: (auto, auto, auto, auto),
+			figure(
+				image("figures/storyboard/step1.png"),
+				caption: [Mission Control queues a message to Mars]
+			),
+			figure(
+				image("figures/storyboard/step2.png"),
+				caption: [Relay becomes available, and the queues are flushed]
+			),
+			figure(
+				image("figures/storyboard/step3.png"),
+				caption: [Message transmitted to Mars Relay]
+			),
+			figure(
+				image("figures/storyboard/step4.png"),
+				caption: [Colony comes in range, and the message is delivered]
+			),
+		)
+	]
+]

@@ -2,4 +2,7 @@
 	(
 		name: "Carson McManus",
 	),
+	(
+		name: "Victor Giraldo",
+	)
 )

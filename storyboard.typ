@@ -33,7 +33,8 @@
 
 #polylux-slide[
 	#slidehead([= Operational Needs to be Addressed])
-
+	- The key to developing anything is communication. To develop and establish a colony on Mars, commuication will have to happen internally and externally.
+	- Communications must be reliable and scalable in order to establish and maintain the quality and integrity of the communications system.
 ]
 
 #polylux-slide[

@@ -81,7 +81,7 @@
 ]
 
 #polylux-slide[
-	= System Concept
+	#slidehead([= System Concept])
 	Queue based message passing system
 
 	#only(1)[

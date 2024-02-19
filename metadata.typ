@@ -4,5 +4,8 @@
 	),
 	(
 		name: "Victor Giraldo",
+	),
+	(
+		name: "Stephanie McDonough",
 	)
 )

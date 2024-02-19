@@ -39,6 +39,21 @@
 #polylux-slide[
 	#slidehead([= Stakeholders])
 
+	#only(1)[
+		*Nasa Command Center*
+	  - Be able to send and receive messages reliably.
+		- Solution must be compatible with existing infrastructure.
+		- Must have secure communication channels to prevent unauthorized access.
+		- Control unmanned missions reliably and monitor systems on Mars.
+		- Should support text, image, and video.
+	]
+
+	#only(2)[
+		*Colonists*
+		- Be able to send and receive messages reliably.
+		- Be able to communicate with mission command to ask about issues or give status reports.
+		- Have personal access to stay in touch with family on Earth.
+	]
 ]
 
 #polylux-slide[

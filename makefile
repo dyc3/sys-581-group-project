@@ -1,6 +1,6 @@
 all:
 	./scripts/generate-changelog.sh > changelog.csv
-	typst compile main.typ main.pdf
+	typst compile --font-path ./fonts main.typ main.pdf
 
 clean:
 	rm *.pdf
@@ -11,6 +11,6 @@ figures:
 full: figures all
 
 storyboard:
-	typst compile storyboard.typ storyboard.pdf
+	typst compile --font-path ./fonts storyboard.typ storyboard.pdf
 
 .PHONY: all clean figures full storyboard

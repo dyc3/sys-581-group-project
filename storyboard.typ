@@ -1,9 +1,19 @@
 #import "@preview/polylux:0.3.1": *
 // Docs for polylux: https://polylux.dev/book/polylux.html
 #import "metadata.typ": *
+#import "slides/lib.typ": *
 
-#set page(paper: "presentation-16-9")
-#set text(size: 25pt)
+#set page(
+	paper: "presentation-16-9",
+	margin: 1cm,
+	fill: black
+)
+#set text(
+	size: 24pt,
+	font: "Kode Mono",
+	fill: white
+)
+#show heading: set text(font: "Aquire")
 
 #polylux-slide[
 	#set align(horizon + center)
@@ -15,24 +25,24 @@
 ]
 
 #polylux-slide[
-	= Executive Summary
+	#slidehead([= Executive Summary])
 
 	- Mars is the closest planet to Earth that can potentially support human life
 	- Communication between Earth and Mars is crucial for the success of the Mars Colonization Project
 ]
 
 #polylux-slide[
-	= Operational Needs to be Addressed
+	#slidehead([= Operational Needs to be Addressed])
 
 ]
 
 #polylux-slide[
-	= Stakeholders
+	#slidehead([= Stakeholders])
 
 ]
 
 #polylux-slide[
-	= Key Features
+	#slidehead([= Key Features])
 
 	#only(1)[
 		*Extentability*

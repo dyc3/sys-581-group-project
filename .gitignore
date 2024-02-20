@@ -3,3 +3,5 @@ changelog.csv
 *.jar
 ./typst
 ./typst.exe
+
+.DS_Store

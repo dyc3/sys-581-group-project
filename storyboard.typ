@@ -43,7 +43,7 @@
 	#only(1)[
 		*Nasa Command Center*
 	  - Be able to send and receive messages reliably.
-		- Solution must be compatible with existing infrastructure.
+		- Solution must be compatible with existing infrastructure and try to minimize budget.
 		- Must have secure communication channels to prevent unauthorized access.
 		- Control unmanned missions reliably and monitor systems on Mars.
 		- Should support text, image, and video.
@@ -68,6 +68,7 @@
 
 		*Built on established standards and technology*
 		- Based on decades of experience with computer networks and the internet
+		- Utilize Mars Relay Network as first nodes in system
 	]
 	#only(2)[
 		*Future Proof*
@@ -89,6 +90,7 @@
 		- "Slow Internet"
 		- Messages are stored in a queue until next hop is available
 		- Nodes can be added or removed from network, routing is dynamic
+		- Utilize existing NASA Deep Space Network for sending signals and Mars Relay Network to receive.
 	]
 	#only(2)[
 		#set text(size: 18pt)

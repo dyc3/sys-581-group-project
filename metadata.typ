@@ -7,5 +7,8 @@
 	),
 	(
 		name: "Stephanie McDonough",
+	),
+	(
+		name: "Nicholas DiMeglio"
 	)
 )

@@ -10,5 +10,8 @@
 	),
 	(
 		name: "Nicholas DiMeglio"
+	),
+	(
+		name: "Juan Ocampo"
 	)
 )

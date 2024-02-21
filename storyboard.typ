@@ -115,3 +115,25 @@
 		)
 	]
 ]
+
+#polylux-slide[
+	#slidehead([= How It Fits In])
+
+	- Will use electricity from the power subsystem
+	- Provides the networking infrastructure to by used as a backbone for other systems
+]
+
+#polylux-slide[
+	#slidehead([= Key Specifications])
+
+	- Guaranteed delivery of messages
+	- Resilient to data corruption and loss
+	- Graceful handling of transmission windows and occlusions
+]
+
+#polylux-slide[
+	#set align(horizon)
+	#set text(size: 40pt)
+
+	#slidehead([= Thank You])
+]

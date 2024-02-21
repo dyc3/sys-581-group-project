@@ -116,6 +116,16 @@
 	]
 ]
 
+
+#polylux-slide[
+	#slidehead([= Specifications for Design & Development])
+
+	- Limit operations around the power generation of the colony
+	- Scalability is important for the addition of other planetary colonies
+	- Equipment should withstand the conditions of Mars' surface and outer space
+	- Primarily expand on existing infrastructure
+]
+
 #polylux-slide[
 	#slidehead([= How It Fits In])
 

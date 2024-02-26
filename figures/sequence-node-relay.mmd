@@ -1,0 +1,11 @@
+sequenceDiagram
+    Relay1-->Relay2: Connection Established
+    Relay1-->Relay2: Negotiate Transfer Speed
+    par Data Transfer
+    Relay2-->>Relay1: Flushes Queue
+    and Data Transfer
+    Relay1-->>Relay2: Flushes Queue
+    end
+    break when connection interrupted or degrades too far
+    Note over Relay1,Relay2: Incomplete queues saved
+    end

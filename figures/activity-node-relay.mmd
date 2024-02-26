@@ -1,0 +1,13 @@
+stateDiagram-v2
+    state "Connection Established" as established
+    state "Flush Queue" as flush
+    state "Receive Messages" as recv
+
+    [*] --> established: Node makes contact
+    established-->flush: Have messages destined for Node
+    established-->[*]: No messages in queue,\nNone to receive
+    established-->recv: Node has messages for us
+    flush-->recv: Swap
+    recv-->flush: Swap
+    recv-->[*]
+    flush-->[*]

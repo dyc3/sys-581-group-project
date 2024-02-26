@@ -1,0 +1,10 @@
+sequenceDiagram
+    actor Alice
+
+    Alice-->>C3: Queues Message
+    C3-->>Alice: Queued
+    Note over C3: System passes message across relay nodes
+    actor Bob
+    C3-->>Bob: Flush Queue
+    Bob-->>C3: Received
+    C3-->>Alice: Ack Receipt

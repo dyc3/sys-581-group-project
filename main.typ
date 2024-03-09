@@ -1,12 +1,4 @@
-#let authors = (
-	(
-		name: "Carson McManus",
-		email: "cmcmanus@stevens.edu",
-		department: [School of Systems and Enterprises],
-		organization: [Stevens Institute of Technology],
-		location: [Hoboken, NJ],
-	),
-)
+#import "metadata.typ": *
 
 // import and use whatever document format you want here
 
@@ -21,7 +13,8 @@
 
 #metadata("!glossary:enable")
 
-// include chapters here
+#include "stakeholders.typ"
+#pagebreak()
 
 
 #metadata("!glossary:disable")

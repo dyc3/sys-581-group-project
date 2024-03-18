@@ -22,6 +22,15 @@ The stakeholders are the people or groups who are affected by the project. The M
 - Must have reliable communication with the colonists
 - Must be able to command unmanned missions remotely
 - Must have secure communication with all nodes of the network
+- NASA requires any of its propulsive spacecraft within 2 million kilometers of Earth to protect their command uplink with encryption that is compliant with Level 1 of the Federal Information Processing Standard (FIPS) 140-3 (10). @NASACommunications2024
+
+== FCC
+
+- Must comply with all laws and regulations regarding radio transmissions @NASACommunications2024
+
+== FAA
+
+- Optical communication must not interfere with or present a hazard to air traffic @NASACommunications2024
 
 == Researchers on Earth
 

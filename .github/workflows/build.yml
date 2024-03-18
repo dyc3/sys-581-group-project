@@ -22,3 +22,11 @@ jobs:
         with:
           name: main.pdf
           path: main.pdf
+
+  typos:
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - uses: actions/checkout@v4
+      - name: typos-action
+        uses: crate-ci/typos@v1.19.0

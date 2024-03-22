@@ -1,0 +1,13 @@
+sequenceDiagram
+    %% Note: Bob acts as Bob and server
+    participant A as Alice
+    participant B as Bob
+    Note over A: Has a message for Bob
+    A->>+B: Delivery Beacon
+    B->>-A: Ready to link
+    Note over A,B: Complete laser link alignment
+    B->>A: Prekey bundle
+    A->>A: Verifies bundle, Derives key for initial message
+    A->>B: Initial message
+    B->>B: Verifies initial message, decrypts
+    Note over A,B: Connection Established

@@ -17,7 +17,8 @@
 #pagebreak()
 #include "system-overview.typ"
 #pagebreak()
-
+#include "subsys-htmq.typ"
+#pagebreak()
 
 #metadata("!glossary:disable")
 #glossary("glossary.yml")

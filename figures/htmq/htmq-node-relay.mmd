@@ -1,0 +1,15 @@
+sequenceDiagram
+    participant A as Alice
+    participant B as Bob
+
+    A-->B: Connection Established
+    par Data Transfer
+    B->>A: Flushes Queue
+    A->>B: Msg Acknowledgements
+    and Data Transfer
+    A->>B: Flushes Queue
+    B->>A: Msg Acknowledgements
+    end
+    break when connection interrupted or degrades too far
+    Note over A,B: Incomplete queues saved
+    end

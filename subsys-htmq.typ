@@ -74,3 +74,15 @@ Shown in @Figure::htmq-node-relay, once a connection is established, messages ar
 Messages in the HTMQ are stored in a priority queue. Each message has a priority level that determines the order in which it is processed. Messages with higher priority levels are processed before messages with lower priority levels. Messages are stored in the queue until they are delivered to their destination. The system is designed to handle messages of any size, from small telemetry packets to large image files.
 
 Once a message is delivered to its destination, the destination node sends an acknowledgment back to the source node. This acknowledgment is used to confirm that the message was successfully delivered. If the acknowledgment is not received within a certain time frame, nodes in the network will attempt to resend the message along a different route.
+
+== Routing
+
+An important prerequisite for the HTMQ to be able to deliver messages is the ability to route messages to the correct next hop. The HTMQ uses a distributed routing algorithm to determine the next hop for each message.
+
+The routing algorithm is based on a combination of the physical location of each node and the current network topology. Each node in the network maintains a routing table that contains the physical location of each node in the network. When a message is received, the node uses this routing table to determine the next hop for the message. The routing table is updated periodically to reflect changes in the network topology.
+
+This works similarly to the Internet, where routers maintain a routing table that is used to determine the next hop for each packet. The HTMQ uses a similar approach to route messages between nodes in the network. The primary difference is that the HTMQ is designed to handle the high latency of interplanetary communications, and additionally takes into account the predicted movement of nodes in the network as they orbit their respective bodies.
+
+=== Maintaining Network Topology
+
+The HTMQ uses a combination of predictive orbital mechanics and real-time range measurements to maintain an accurate network topology. Each node in the network periodically broadcasts its measurements to its neighbors. From this information, each node can calculate the relative position of its neighbors and update its routing table accordingly. Nodes that have authoritative absolute position information (e.g., Earth and Mars) allow the network to resolve relative positions into absolute positions.

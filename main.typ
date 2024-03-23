@@ -15,9 +15,9 @@
 
 #include "stakeholders.typ"
 #pagebreak()
-#include "system-overview.typ"
-#pagebreak()
 #include "top-level-functions.typ"
+#pagebreak()
+#include "system-overview.typ"
 #pagebreak()
 #include "subsys-htmq.typ"
 #pagebreak()

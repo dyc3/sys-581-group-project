@@ -86,3 +86,16 @@ This works similarly to the Internet, where routers maintain a routing table tha
 === Maintaining Network Topology
 
 The HTMQ uses a combination of predictive orbital mechanics and real-time range measurements to maintain an accurate network topology. Each node in the network periodically broadcasts its measurements to its neighbors. From this information, each node can calculate the relative position of its neighbors and update its routing table accordingly. Nodes that have authoritative absolute position information (e.g., Earth and Mars) allow the network to resolve relative positions into absolute positions.
+
+== Interactions with Other Systems
+
+=== IP network
+
+As the HTMQ is used for long-range communication between spacecraft and planets, it is designed to work in conjunction with the IP network. The IP network is used for local communication within the colony and Mission Control. Applications running on the network can use the HTMQ dispatcher to send and receive messages from the HTMQ network. The dispatcher is responsible for handling the details of sending and receiving messages over the HTMQ network, shown in @Figure::htmq-ip-interact-send.
+
+// TODO: add figure for receiving
+
+#figure(
+	image("figures/htmq/htmq-ip-interact-send.svg"),
+	caption: [Sequence diagram of how the IP network interacts with the HTMQ to send a message.],
+) <Figure::htmq-ip-interact-send>

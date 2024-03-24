@@ -1,0 +1,16 @@
+sequenceDiagram
+    actor user as Alice
+    box IP network
+    participant app as Application
+    participant dispatch as HTMQ Dispatcher
+    end
+
+    user->>+app: Send this to Bob
+    app->>app: Construct msg
+    app->>+dispatch: Send to Bob
+    dispatch->>+HTMQ: Queue msg
+    HTMQ->>-dispatch: OK
+    dispatch->>-app: OK
+    opt Application Dependant
+    app->>-user: Display visual feedback
+    end

@@ -1,3 +1,4 @@
+#import "@preview/bytefield:0.0.5": *
 #import "lib/pugh.typ": *
 
 = High Throughput Message Queue (HTMQ)
@@ -83,9 +84,85 @@ The routing algorithm is based on a combination of the physical location of each
 
 This works similarly to the Internet, where routers maintain a routing table that is used to determine the next hop for each packet. The HTMQ uses a similar approach to route messages between nodes in the network. The primary difference is that the HTMQ is designed to handle the high latency of interplanetary communications, and additionally takes into account the predicted movement of nodes in the network as they orbit their respective bodies.
 
+// TODO: pseudocode for routing algorithm
+
 === Maintaining Network Topology
 
 The HTMQ uses a combination of predictive orbital mechanics and real-time range measurements to maintain an accurate network topology. Each node in the network periodically broadcasts its measurements to its neighbors. From this information, each node can calculate the relative position of its neighbors and update its routing table accordingly. Nodes that have authoritative absolute position information (e.g., Earth and Mars) allow the network to resolve relative positions into absolute positions.
+
+// TODO: node address assignment, structure
+
+== Link Protocol
+
+The HTMQ's Link Protocol is a custom protocol that is used to send messages between nodes in the network.
+
+=== Packet Structure
+
+Communication is structured as an exchange of packets. Each packet contains a header and a payload. The header contains information about the packet, such as the protocol version, the packet length, and a CRC32 checksum. The payload contains the actual content of the packet. All numbers are encoded as little endian.
+
+#block(breakable: false)[
+	The packet structure is shown in the following bytefield:
+
+	#bytefield(
+		bitheader(
+			"bytes",
+		),
+		group(right, 3)[Header],
+		bytes(2)[Protocol Version],
+		bytes(2, fill: luma(180))[#text(style: "italic", "Reserved")],
+		bits(32)[CRC32],
+		bytes(4)[Packet Length],
+		group(right, 6)[Payload],
+		bytes(24)[Packet Content],
+	)
+]
+
+=== Message Structure
+
+Messages are the highest level of abstraction in the HTMQ. They are composed of blocks, which are sent as packets over the network. Each block contains a portion of the message content, and the blocks are reassembled at the destination node to reconstruct the original message.
+
+#figure(
+	pugh(
+		("Cap'n Proto", "Protobuf", "JSON", "XML"),
+		(
+			(criterion: "Serialization Speed", weight: 5),
+			(criterion: "Deserialization Speed", weight: 5),
+			(criterion: "Message Size", weight: 3),
+			(criterion: "Error Handling", weight: 4),
+			(criterion: "Extensibility", weight: 3),
+		),
+		(
+			(5, 2, 2, 1),
+			(4, 5, 2, 1),
+			(1, 3, 4, 1),
+			(5, 5, 3, 2),
+			(4, 1, 3, 5),
+		)
+	),
+	caption: [Pugh matrix comparing different wire formats for HTMQ messages.],
+)
+
+
+The following Cap'n Proto schema defines the structure of a message and its blocks:
+
+```capnp
+struct Message {
+	id @0 :List(UInt8); // UUIDv4, encoded as 128 bits
+	service @1 :Text: // Service name (e.g., "telemetry")
+	source @2 :List(UInt8); // The address of the sender, encoded as 128 bits
+	dest @3 :List(UInt8); // The address of the receiver encoded as 128 bits
+	contentlength @4 :UInt64; // The length of the content in bytes
+	priority @5 :UInt8; // The priority of the message
+	blocksize @6 :UInt64; // The size of each block in bytes
+	blocks @7 :List(Block); // The blocks that make up the message
+}
+
+struct Block {
+	index @0 :UInt64; // The index of the block in the message
+	checksum @1 :Text; // The checksum of the block, SHA256
+	blob @2 :Data; // The content of the block
+}
+```
 
 == Interactions with Other Systems
 

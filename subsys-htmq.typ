@@ -90,7 +90,9 @@ This works similarly to the Internet, where routers maintain a routing table tha
 
 The HTMQ uses a combination of predictive orbital mechanics and real-time range measurements to maintain an accurate network topology. Each node in the network periodically broadcasts its measurements to its neighbors. From this information, each node can calculate the relative position of its neighbors and update its routing table accordingly. Nodes that have authoritative absolute position information (e.g., Earth and Mars) allow the network to resolve relative positions into absolute positions.
 
-// TODO: node address assignment, structure
+=== Node Addresses
+
+Node addresses uses the same notation as IPv6 addresses. They must be unique throughout the entire network. They will be static and assigned as NASA sees fit, which allows NASA to organize the network in a way that makes sense for them.
 
 == Link Protocol
 

@@ -7,7 +7,8 @@ sequenceDiagram
     alt Packet received successfully
         Receiver->>Sender: ACK
         Note over Sender, Receiver: Acknowledgment received
-    else Packet lost or corrupted
+    else Timeout or packet lost
+        Note over Sender, Receiver: Timeout or packet lost
         Receiver->>Sender: NAK
         Note over Sender, Receiver: Negative acknowledgment received
         Sender->>Receiver: Retransmit Packet

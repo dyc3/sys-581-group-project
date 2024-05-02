@@ -172,11 +172,14 @@ struct Block {
 
 === IP network
 
-As the HTMQ is used for long-range communication between spacecraft and planets, it is designed to work in conjunction with the IP network. The IP network is used for local communication within the colony and Mission Control. Applications running on the network can use the HTMQ dispatcher to send and receive messages from the HTMQ network. The dispatcher is responsible for handling the details of sending and receiving messages over the HTMQ network, shown in @Figure::htmq-ip-interact-send.
-
-// TODO: add figure for receiving
+As the HTMQ is used for long-range communication between spacecraft and planets, it is designed to work in conjunction with the IP network. The IP network is used for local communication within the colony and Mission Control. Applications running on the network can use the HTMQ dispatcher to send and receive messages from the HTMQ network. The dispatcher is responsible for handling the details of sending and receiving messages over the HTMQ network, shown in @Figure::htmq-ip-interact-send and @Figure::htmq-ip-interact-recv.
 
 #figure(
 	image("figures/htmq/htmq-ip-interact-send.svg"),
 	caption: [Sequence diagram of how the IP network interacts with the HTMQ to send a message.],
 ) <Figure::htmq-ip-interact-send>
+
+#figure(
+	image("figures/htmq/htmq-ip-interact-recv.svg"),
+	caption: [Sequence diagram of how the IP network interacts with the HTMQ to receive a message.],
+) <Figure::htmq-ip-interact-recv>

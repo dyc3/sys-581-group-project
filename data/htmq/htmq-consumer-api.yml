@@ -1,0 +1,28 @@
+openapi: 3.0.3
+info:
+  title: HTMQ Consumer API
+  description: |
+    This is the API that service consumers must implement in order to receive messages from the HTMQ network.
+  version: "1"
+paths:
+  /receive:
+    post:
+      summary: Receive a message from the HTMQ network.
+      requestBody:
+        description: The contents of the message, byte verbatim.
+        content:
+          application/octet-stream:
+            schema:
+              $ref: "#/components/schemas/binary"
+      responses:
+        "200":
+          description: Message was successfully received.
+        "500":
+          description: Service has encountered an unrecoverable error.
+        "503":
+          description: Service is not ready to accept new messages yet.
+components:
+  schemas:
+    binary:
+      type: string
+      format: binary

@@ -179,6 +179,10 @@ As the HTMQ is used for long-range communication between spacecraft and planets,
 	caption: [Sequence diagram of how the IP network interacts with the HTMQ to send a message.],
 ) <Figure::htmq-ip-interact-send>
 
+Services running on the IP network must listen for incoming messages from the HTMQ dispatcher on port 14650 as an HTTP server. The service must implement the following OpenAPI spec:
+
+#raw(read("data/htmq/htmq-consumer-api.yml"), lang: "yaml")
+
 #figure(
 	image("figures/htmq/htmq-ip-interact-recv.svg"),
 	caption: [Sequence diagram of how the IP network interacts with the HTMQ to receive a message.],

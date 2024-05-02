@@ -1,5 +1,6 @@
-# good-typst-template
-My personal typst template repo that includes CI, mermaid/plantuml figures, and other useful bits.
+# Mars Communication, Command, and Control (C3) Architecture
+
+This repository contains the source code a document describing a hypothetical Mars Communication, Command, and Control (C3) architecture. The document is written in [typst](https://typst.app), and was created as a group project for SYS 581 Intro to Systems course at Stevens Institute of Technology.
 
 ## Setup
 

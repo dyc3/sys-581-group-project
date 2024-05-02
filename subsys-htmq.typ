@@ -170,3 +170,9 @@ Services running on the IP network must listen for incoming messages from the HT
 	image("figures/htmq/htmq-ip-interact-recv.svg"),
 	caption: [Sequence diagram of how the IP network interacts with the HTMQ to receive a message.],
 ) <Figure::htmq-ip-interact-recv>
+
+== Verification
+
+It is necessary to verify that the HTMQ subsystem will function correctly in the context of the overall system. This can be done through a combination of simulation and testing. The HTMQ can be simulated using a network simulator that models the behavior of the laser links and the message queues. This simulation can be used to test the performance of the HTMQ under different conditions, such as high traffic loads or node failures. Additionally, the HTMQ can be tested using a hardware-in-the-loop testbed that simulates the laser links and the message queues. This testbed can be used to verify that the HTMQ can handle the data transfer requirements.
+
+NASA is planning to perform a test of optical communications between Earth and the Moon in 2025, called "Orion Artemis II Optical Communications System (O2O)". @NASAOrionArtemisII2024 This will verify whether or not optical communications can be used for long-range communication in space.

@@ -108,6 +108,8 @@ Communication is structured as an exchange of packets. Each packet contains a he
 	#bytefield(
 		bitheader(
 			"bytes",
+			0, [Bit],
+			31, [Bit],
 		),
 		group(right, 3)[Header],
 		bytes(2)[Protocol Version],

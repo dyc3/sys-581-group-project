@@ -1,3 +1,5 @@
+@0x93279c61cef9bd48;
+
 struct Message {
 	id @0 :List(UInt8); # UUIDv4, encoded as 128 bits
 	service @1 :Text; # Service name (e.g., "telemetry")

@@ -12,6 +12,19 @@ Note: Running in WSL may require some additional setup for mermaid to work. See:
 
 ## Usage
 
+if you have `just` installed, you can run these:
+
+```bash
+# build the document
+just build
+
+# rerender all figures
+just figures
+
+# build the document in watch mode (rebuilds on file changes)
+just watch
+```
+
 if you have `make` installed, you can run these:
 
 ```bash

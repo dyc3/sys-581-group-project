@@ -1,0 +1,17 @@
+sequenceDiagram
+    box IP network
+    participant app as Application
+    participant dispatch as HTMQ Dispatcher
+    end
+
+    HTMQ->>HTMQ: Receives message
+    HTMQ->>+dispatch: Deliver message
+    dispatch->>-HTMQ: Acknowledge
+    HTMQ->>HTMQ: Broadcasts ACK to network
+    dispatch->>+app: Attempt delivery
+    break when delivery fails
+        app-xdispatch: Error
+        dispatch->>dispatch: Wait and Retry
+    end
+    app->>-dispatch: OK
+    dispatch->>dispatch: Deletes message from storage

@@ -1,0 +1,15 @@
+sequenceDiagram
+    participant Sender
+    participant Receiver
+
+    Sender->>Receiver: Transmit Packet
+    Note over Sender, Receiver: Packet transmission
+    alt Packet received successfully
+        Receiver->>Sender: ACK
+        Note over Sender, Receiver: Acknowledgment received
+    else Packet lost or corrupted
+        Receiver->>Sender: NAK
+        Note over Sender, Receiver: Negative acknowledgment received
+        Sender->>Receiver: Retransmit Packet
+        Note over Sender, Receiver: Packet retransmission
+    end

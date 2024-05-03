@@ -151,6 +151,17 @@ The following Cap'n Proto schema defines the structure of a message and its bloc
 
 #raw(read("data/htmq/htmq-message.capnp"), lang: "capnp", syntaxes: "data/capnp.sublime-syntax")
 
+== Signal Integrity
+
+Due to the nature of any wireless communication, the HTMQ must be able to handle signal degradation. The HTMQ uses a combination of forward error correction (FEC) and automatic repeat request (ARQ) to ensure that messages are delivered correctly.
+
+There are many sources of signal degradation in the HTMQ, outlined in @Figure::htmq-optical-loss-sources. @biswas2003deep
+
+#figure(
+	image("figures/htmq/htmq-optical-loss-sources.svg"),
+	caption: [A comprehensive visualization of the sources of optical loss in the HTMQ. @biswas2003deep],
+) <Figure::htmq-optical-loss-sources>
+
 == Interactions with Other Systems
 
 === IP network

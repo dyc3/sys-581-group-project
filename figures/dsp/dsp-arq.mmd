@@ -3,14 +3,8 @@ sequenceDiagram
     participant Receiver
 
     Sender->>Receiver: Transmit Packet
-    Note over Sender, Receiver: Packet transmission
     alt Packet received successfully
         Receiver->>Sender: ACK
-        Note over Sender, Receiver: Acknowledgment received
-    else Timeout or packet lost
-        Note over Sender, Receiver: Timeout or packet lost
-        Receiver->>Sender: NAK
-        Note over Sender, Receiver: Negative acknowledgment received
-        Sender->>Receiver: Retransmit Packet
-        Note over Sender, Receiver: Packet retransmission
+    else Timeout
+        Sender->>Sender: Retransmit Packet
     end

@@ -21,6 +21,8 @@
 #pagebreak()
 #include "subsys-htmq.typ"
 #pagebreak()
+#include "subsys-dsp.typ"
+#pagebreak()
 
 #metadata("!glossary:disable")
 #glossary("glossary.yml")

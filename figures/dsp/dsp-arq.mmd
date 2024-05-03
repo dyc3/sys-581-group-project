@@ -1,0 +1,10 @@
+sequenceDiagram
+    participant Sender
+    participant Receiver
+
+    Sender->>Receiver: Transmit Packet
+    alt Packet received successfully
+        Receiver->>Sender: ACK
+    else Timeout
+        Sender->>Sender: Retransmit Packet
+    end

@@ -1,0 +1,27 @@
+@startmindmap
+* System Loss
+** Fixed Loss
+*** Transmitter Gain
+**** Aperture and Obscuration Diameter
+**** Laser Wavelength
+**** Transmitter Strehl
+*** Transmission Loss
+**** Relay Optics Loss
+**** Laser Coupling Loss
+*** Pointing Loss
+**** RMS Jitter
+**** Bias
+**** Pointing-Induced Fade
+*** Receiver Loss
+**** Relay Optics Loss
+**** Truncation and Split Loss
+**** Strehl Loss
+** Variable Loss
+*** Space Loss
+**** Mars Range
+*** Atmonspheric Attenuation Loss
+**** Zenith Angle
+**** Site Altitude and Aerosol Model
+*** Receiver Gain
+**** Aperture and Obscuration Diameter
+@endmindmap

@@ -96,7 +96,7 @@ Node addresses uses the same notation as IPv6 addresses. They must be unique thr
 
 == Link Protocol
 
-The HTMQ's Link Protocol is a custom protocol that is used to send messages between nodes in the network.
+The HTMQ's Link Protocol is a custom protocol that is used to send messages between nodes in the network. Using existing protocols such as TCP/IP would be inefficient due to the high latency and high error rates of interplanetary communications. @chan2006free
 
 === Packet Structure
 

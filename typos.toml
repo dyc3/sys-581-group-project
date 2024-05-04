@@ -2,4 +2,4 @@
 Aquire = "Aquire" # font name used in slides
 
 [files]
-extend-exclude = ["*.svg", "*.bib"]
+extend-exclude = ["*.svg", "*.bib", "*.ipynb"]

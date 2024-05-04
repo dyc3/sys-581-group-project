@@ -182,6 +182,24 @@ Services running on the IP network must listen for incoming messages from the HT
 	caption: [Sequence diagram of how the IP network interacts with the HTMQ to receive a message.],
 ) <Figure::htmq-ip-interact-recv>
 
+== Integration and Deployment
+
+The backbone of the HTMQ network will be deployed as a series of 50 relay satellites in orbit around the Sun as seen in @Figure::htmq-network-deployment. The satellites will be placed in 2 rings:
+- 20 satellites at 0.85 AU from the Sun, between Venus and Earth
+- 30 satellites at 1.5 AU from the Sun, between Mars and Earth
+
+#figure(
+	image("figures/htmq/htmq-network-deployment.png"),
+	caption: [Deployment of the HTMQ network in orbit around the Sun.],
+) <Figure::htmq-network-deployment>
+
+The satellites will be equipped with 3 high-speed optical laser links that can individually articulate to establish connections with other satellites. The satellites will also be equipped with a flywheel system to maintain their orientation and a solar panel system to provide power.
+
+This configuration has several benefits:
+- Most satellites will be underutilized, but this allows for a high degree of fault tolerance.
+- Lower priority traffic can be sent along unoptimal routes while still making progress to the destination.
+- The shorter transmission distances allows for the highest possible data transfer rate with the least error rate, and the least amount of power consumption.
+
 == Verification
 
 It is necessary to verify that the HTMQ subsystem will function correctly in the context of the overall system. This can be done through a combination of simulation and testing. The HTMQ can be simulated using a network simulator that models the behavior of the laser links and the message queues. This simulation can be used to test the performance of the HTMQ under different conditions, such as high traffic loads or node failures. Additionally, the HTMQ can be tested using a hardware-in-the-loop testbed that simulates the laser links and the message queues. This testbed can be used to verify that the HTMQ can handle the data transfer requirements.

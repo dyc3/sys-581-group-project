@@ -162,6 +162,17 @@ There are many sources of signal degradation in the HTMQ, outlined in @Figure::h
 	caption: [A comprehensive visualization of the sources of optical loss in the HTMQ. @biswas2003deep],
 ) <Figure::htmq-optical-loss-sources>
 
+== Link Latency and Data Rates
+
+There are several factors that affect the latency of the HTMQ. The primary factor is the distance between the transmitter and receiver. The speed of light in a vacuum is approximately 299,792,458 meters per second. The HTMQ is designed to handle this high latency by using a store-and-forward message queue.
+
+The HTMQ's data rate is determined by the speed of the laser links, which is also affected by several factors. @biswas2003deep
+- Wavelength: Shorter wavelengths allow for higher data rates, but are more susceptible to interference. As a result, the HTMQ uses a wavelength of 1550 nm, which is a good balance between data rate and interference.
+- Power: Higher power lasers can transmit data for longer distances without degradation, but require more power.
+- Receiver Size: Larger receivers can capture more light, allowing higher reliability at longer.
+- Sender and Receiver Telescope Size: Longer telescopes can improve the signal-to-noise ratio, allowing for higher data rates.
+- Atmospheric Conditions: The atmosphere can affect the transmission of light, which would affect the integrity of the signal. This causes additional retransmissions, which increases latency and lowers the effective data rate.
+
 == Interactions with Other Systems
 
 === IP network

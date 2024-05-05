@@ -28,7 +28,7 @@ The DSP has a dual module setup.
 
 == Signal Integrity
 
-The DSP will employ a modulation technique called phase-shift keying. Phase-shift keying helps mantain signal clarity over vast distances.
+The DSP will employ a modulation technique called phase-shift keying. Phase-shift keying helps maintain signal clarity over vast distances.
 
 == Security
 

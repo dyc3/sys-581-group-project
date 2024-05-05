@@ -20,11 +20,11 @@ As a result, we did not believe a Pugh matrix was necessary to showcase that, of
 
 The most fundamental part of this system is the handheld radio device that each colonist will have. It is, by all intents and purposes, a walkie-talkie. However, it will be specifically resilient to impact, dusty conditions, and radiation. It will be encased in a plastic-covered lead plating that ensures that it can endure the conditions of the Martian surface. 
 
-Further, it will have an omni-direcitonal whip antenna & transceiver, to ensure the longest possible range at any direction. The default range expected is 6 miles.
+Further, it will have an omni-directional whip antenna & transceiver, to ensure the longest possible range at any direction. The default range expected is 6 miles.
 
 These are extremely portable and lightweight compared to other cargo coming with them on the mission, enabling easy transport to the planet. The familiar platform will ensure each colonist does not need any special training to operate the handheld devices.
 
-They will also be equipped with solar panels and rechargable batteries in order to keep the low amount of power they need for a very extended amount of time.
+They will also be equipped with solar panels and rechargeable batteries in order to keep the low amount of power they need for a very extended amount of time.
 
 === On-Base Antenna
 
@@ -42,7 +42,7 @@ The radio waves we will be using are Ultra-High Frequency, or UHF, waves. These 
 
 These waves travel the best in line-of-sight applications, and hold a better accuracy of data transmission as compared to lower frequencies.
 
-A futher, and much more critical concern, with using traditional lower-range high frequency, or HF, waves is that they work by bouncing off the ionosphere of Earth to travel long distance. The ionosphere of Mars is thinner, and will not perform nearly as well as it will on Earth. Mars is also covered in a layer of iron, which will greatly impede the radio transmission distance and accuracy of the transmission using these waves.
+A further, and much more critical concern, with using traditional lower-range high frequency, or HF, waves is that they work by bouncing off the ionosphere of Earth to travel long distance. The ionosphere of Mars is thinner, and will not perform nearly as well as it will on Earth. Mars is also covered in a layer of iron, which will greatly impede the radio transmission distance and accuracy of the transmission using these waves.
 
 As a result, the UHF waves provide the best middle-ground of being compatible with the environment and being very easy to set up and use.
 

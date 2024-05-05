@@ -59,7 +59,7 @@ There is a two-step process to the SRR:
 - Each colonist carries one handheld radio communication device.
 - The colony base is equipped with a dedicated transceiver for a longer range of transmission.
 
-The figure below showcases the range differences and how this will exist on the colony.
+@Figure::colony-radio-range showcases the range differences and how this will exist on the colony.
 
 #figure(
 	image("figures/srr/colony-radio-range.png", width: 70%),

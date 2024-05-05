@@ -199,12 +199,14 @@ The backbone of the HTMQ network will be deployed as a series of 50 relay satell
 - 20 satellites at 0.85 AU from the Sun, between Venus and Earth
 - 30 satellites at 1.5 AU from the Sun, between Mars and Earth
 
+Additionally, 2 satellites will be placed in orbit around Mars and Earth each (for a total of 4 gateway satellites) to act as gateways to the HTMQ network. This allows for the highest possible data transfer rate from ground to space. These gateway satellites will function identically to the relay satellites.
+
 #figure(
 	image("figures/htmq/htmq-network-deployment.png"),
 	caption: [Deployment of the HTMQ network in orbit around the Sun.],
 ) <Figure::htmq-network-deployment>
 
-The satellites will be equipped with 3 high-speed optical laser links that can individually articulate to establish connections with other satellites. The satellites will also be equipped with a flywheel system to maintain their orientation and a solar panel system to provide power.
+The backbone satellites will be equipped with 3 high-speed optical laser links that can individually articulate to establish connections with other satellites. The satellites will also be equipped with a flywheel system to maintain their orientation and a solar panel system to provide power.
 
 This configuration has several benefits:
 - Most satellites will be underutilized, but this allows for a high degree of fault tolerance.

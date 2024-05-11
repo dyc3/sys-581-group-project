@@ -203,7 +203,7 @@ The backbone #index[backbone] of the HTMQ network will be deployed as a series o
 Additionally, 2 satellites will be placed in orbit around Mars and Earth each (for a total of 4 gateway satellites) to act as gateways to the HTMQ network. This allows for the highest possible data transfer rate from ground to space. These gateway satellites will function identically to the relay satellites.
 
 #figure(
-	image("figures/htmq/htmq-network-deployment.png"),
+	image("figures/htmq/htmq-network-deployment.svg"),
 	caption: [Deployment of the HTMQ network in orbit around the Sun.],
 ) <Figure::htmq-network-deployment>
 

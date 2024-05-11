@@ -15,7 +15,16 @@
 	let criterions = criteria.map(row => row.criterion)
 	let weights = criteria.map(row => row.weight)
 	let rows = criterions.zip(weights, values)
-	let sums = array.range(0, solutions.len()).map(i => values.map(row => row.at(i)).sum() * weights.at(i))
+	let sums = array.range(0, solutions.len())
+		.map(sol =>
+			values.enumerate()
+				.map(pair => {
+					let c = pair.at(0)
+					let row = pair.at(1)
+					row.at(sol) * weights.at(c)
+				})
+				.sum()
+		)
 
 	table(
 		columns: solutions.len() + 2,

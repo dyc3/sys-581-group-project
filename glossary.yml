@@ -1,3 +1,8 @@
-Foo:
-  definition: Example glossary item
-  link: https://example.com
+HTMQ:
+  definition: High Throughput Message Queue - A subsystem of the Mars C3 System
+C3:
+  definition: Command, Control, and Communications
+DSP:
+  definition: Data Streaming Protocol - A subsystem of the Mars C3 System
+Mars:
+  definition: The fourth planet from the Sun.

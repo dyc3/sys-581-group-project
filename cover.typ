@@ -1,7 +1,7 @@
 // TODO: format
 
 #page()[
-	= Mars Communication, Command, and Control System
+	#heading(outlined: false)[Mars Communication, Command, and Control System]
 
 	#import "metadata.typ": authors
 

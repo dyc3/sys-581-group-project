@@ -1,27 +1,39 @@
 #import "metadata.typ": *
 
-// import and use whatever document format you want here
-
-
 #import "lib/glossary.typ": glossary, glossaryWords, glossaryShow
 #show glossaryWords("glossary.yml"): word => glossaryShow("glossary.yml", word)
-// Index-Entry hiding : this rule makes the index entries in the document invisible.
-#show figure.where(kind: "jkrb_index"): it => {}
 #metadata("!glossary:disable")
 
-// put outlines, title pages, etc here
+#include "cover.typ"
+
+#set heading(numbering: "1.")
+#set page(numbering: "1")
 
 #metadata("!glossary:enable")
+#include "abstract.typ"
+#pagebreak()
+#metadata("!glossary:disable")
+#outline(
+	indent: auto,
+)
+#pagebreak()
+#metadata("!glossary:enable")
 
-#include "stakeholders.typ"
+#include "intro.typ"
 #pagebreak()
-#include "top-level-functions.typ"
+#include "problem-definition.typ"
 #pagebreak()
-#include "system-overview.typ"
+#include "functional-breakdown.typ"
 #pagebreak()
-#include "subsys-htmq.typ"
+#include "system-concept.typ"
 #pagebreak()
-#include "subsys-dsp.typ"
+#include "major-subsystems.typ"
+#pagebreak()
+#include "integration-testing.typ"
+#pagebreak()
+#include "acceptance-plan.typ"
+#pagebreak()
+#include "system-robustness.typ"
 #pagebreak()
 #include "subsys-srr.typ"
 #pagebreak()
@@ -31,4 +43,7 @@
 #pagebreak()
 #include "index.typ"
 #pagebreak()
-#bibliography("bibfile.bib")
+#bibliography(
+	"bibfile.bib",
+	title: "References",
+)

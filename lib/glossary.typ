@@ -1,7 +1,7 @@
 // copied from: https://github.com/typst/typst/issues/755#issuecomment-1542595624
 // modified to taste
 
-#import "@preview/in-dexter:0.0.5": *
+#import "@preview/in-dexter:0.2.0": *
 
 // Generate a regex that matches all the words in glossary named filename
 #let glossaryWords(filename) = {
@@ -29,7 +29,7 @@
 
   // allow for enabling/disabling glossary links with metadata
   return locate(loc => {
-    let metas = query(selector(metadata).before(loc), loc).filter(meta => meta.value.starts-with("!glossary:"))
+    let metas = query(selector(metadata).before(loc), loc).filter(meta => type(meta.value) == str and meta.value.starts-with("!glossary:"))
     let enabled = false
     for meta in metas {
       let command = meta.value.split(":").at(1)
@@ -63,5 +63,5 @@
   if data.len() > 0 [
     #heading(title) #label("glossary")
   ]
-  terms(..data.pairs().map(((word,info)) => terms.item(word, [#info.definition\ → #if "link" in info {link(info.link)}])))
+  terms(..data.pairs().map(((word,info)) => terms.item(word, [#info.definition#if "link" in info {[\ → #link(info.link)]}])))
 }

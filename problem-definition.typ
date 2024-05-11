@@ -1,4 +1,8 @@
 = Problem Definition
 
-#include "stakeholders.typ"
-#pagebreak()
+#[
+	#set heading(offset: 1)
+
+	#include "stakeholders.typ"
+	#pagebreak()
+]

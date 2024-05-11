@@ -1,7 +1,7 @@
 // copied from: https://github.com/typst/typst/issues/755#issuecomment-1542595624
 // modified to taste
 
-#import "@preview/in-dexter:0.0.5": *
+#import "@preview/in-dexter:0.2.0": *
 
 // Generate a regex that matches all the words in glossary named filename
 #let glossaryWords(filename) = {

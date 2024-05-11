@@ -26,6 +26,8 @@ These are extremely portable and lightweight compared to other cargo coming with
 
 They will also be equipped with solar panels and rechargeable batteries in order to keep the low amount of power they need for a very extended amount of time.
 
+A side note to add is that all NASA-made space suits have SRR built in using similar specs as our own. Any colonist on mission outside of the colony base can opt to use the built-in radio comms within the suit to communicate with other colonists, as it will be tuned to the exact same frequency channel as the other handheld devices.
+
 === On-Base Antenna
 
 The largest prohibitor of range is the curvature of the planet, and the higher a transceiver is, the further it can send a message.

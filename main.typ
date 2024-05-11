@@ -1,4 +1,8 @@
 #import "metadata.typ": *
+#set document(
+	title: "Mars Colony Mission: Communication, Command, and Control System",
+	author: authors.map(author => author.name),
+)
 
 #import "lib/glossary.typ": glossary, glossaryWords, glossaryShow
 #show glossaryWords("glossary.yml"): word => glossaryShow("glossary.yml", word)

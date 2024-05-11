@@ -29,7 +29,7 @@
 
   // allow for enabling/disabling glossary links with metadata
   return locate(loc => {
-    let metas = query(selector(metadata).before(loc), loc).filter(meta => meta.value.starts-with("!glossary:"))
+    let metas = query(selector(metadata).before(loc), loc).filter(meta => type(meta.value) == str and meta.value.starts-with("!glossary:"))
     let enabled = false
     for meta in metas {
       let command = meta.value.split(":").at(1)

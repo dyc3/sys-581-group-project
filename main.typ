@@ -35,6 +35,8 @@
 #pagebreak()
 #include "system-robustness.typ"
 #pagebreak()
+#include "subsys-srr.typ"
+#pagebreak()
 
 #metadata("!glossary:disable")
 #glossary("glossary.yml")

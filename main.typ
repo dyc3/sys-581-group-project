@@ -2,8 +2,6 @@
 
 #import "lib/glossary.typ": glossary, glossaryWords, glossaryShow
 #show glossaryWords("glossary.yml"): word => glossaryShow("glossary.yml", word)
-// Index-Entry hiding : this rule makes the index entries in the document invisible.
-#show figure.where(kind: "jkrb_index"): it => {}
 #metadata("!glossary:disable")
 
 #include "cover.typ"

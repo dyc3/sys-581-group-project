@@ -30,3 +30,10 @@ At a high level, there are a few different architectures that we could pursue.
 	),
 	caption: [Pugh matrix comparing C3 systems.],
 ) <Table::c3-pugh>
+
+#[
+	#set heading(offset: 1)
+
+	#include "system-overview.typ"
+	#pagebreak()
+]

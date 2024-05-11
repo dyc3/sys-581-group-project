@@ -1,1 +1,7 @@
 = Abstract
+
+NASA's ambitious mission to establish a human presence on Mars involves the development of a cutting-edge communication system, known as the C3 System. This system is pivotal for the success of interplanetary colonization and is designed to support subsequent exploration efforts that could span decades. The primary objectives of the C3 System include facilitating robust communication between Earth and Mars, commanding both manned and unmanned missions, and ensuring efficient interpersonal communication among colonists. The system leverages Mars's environmental conditions and technological advances to ensure high reliability and minimal dependency on Earth.
+
+The C3 System comprises several interconnected components, including oribtal satellites, ground-based relay stations, and deep space probes. These components work together to overcome the challenges posed by Mars vast distance from Earth and extreme environmental conditions. The system is designed to align with the dynamic needs of the Mars Colony, including real-time command capabilities and continuous communcation.
+
+The design team deliberated over multiple system designs, and engaged in rigorous testing to ensure the C3 system meets all necessary performance, safety, scalability, and sustainability requirements. The C3 system will be a cornerstone of successful human habitation on Mars for years to come.

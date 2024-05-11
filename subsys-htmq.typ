@@ -194,7 +194,7 @@ Services running on the IP network must listen for incoming messages from the HT
 	caption: [Sequence diagram of how the IP network interacts with the HTMQ to receive a message.],
 ) <Figure::htmq-ip-interact-recv>
 
-== Integration and Deployment #index[deployment]
+== Integration and Deployment <Section::htmq-deploy> #index[deployment]
 
 The backbone #index[backbone] of the HTMQ network will be deployed as a series of 50 relay satellites #index[satellite] in orbit around the Sun as seen in @Figure::htmq-network-deployment. The satellites will be placed in 2 rings:
 - 20 satellites at 0.85 AU from the Sun, between Venus and Earth
@@ -219,3 +219,41 @@ This configuration has several benefits:
 It is necessary to verify that the HTMQ subsystem will function correctly in the context of the overall system. This can be done through a combination of simulation and testing. The HTMQ can be simulated using a network simulator that models the behavior of the laser links and the message queues. This simulation can be used to test the performance of the HTMQ under different conditions, such as high traffic loads or node failures. Additionally, the HTMQ can be tested using a hardware-in-the-loop testbed that simulates the laser links and the message queues. This testbed can be used to verify that the HTMQ can handle the data transfer requirements.
 
 NASA is planning to perform a test of optical communications between Earth and the Moon in 2025, called "Orion Artemis II Optical Communications System (O2O)". @NASAOrionArtemisII2024 This will verify whether or not optical communications can be used for long-range communication in space.
+
+=== Simulations
+
+We performed a functional simulation of the HTMQ network to determine the expected performance of the system. The simulated timespan was from 2028 to 2032, using the proposed network configuration in @Section::htmq-deploy.
+
+#figure(
+	image("figures/htmq/htmq-msg-travel-distance.svg"),
+	caption: [The actual distance between Earth and Mars vs the distance along the network over time.],
+) <Figure::htmq-msg-travel-distance>
+
+The variance in @Figure::htmq-msg-travel-distance can be attributed to the elliptical orbits of Earth and Mars. The distance between the two planets's orbits varies. This can be minimized by adjusting the orbits of the relay satellites.
+
+At the time of writing, there have been a few real world tests of optical communications in space, listed in @Table::htmq-optical-tests.
+
+#figure(
+	table(
+		columns: 3,
+		[Test], [Distance (km)], [Data Rate (bit/s)],
+		link("https://www.jpl.nasa.gov/news/nasas-tech-demo-streams-first-video-from-deep-space-via-laser")[Taters],[31000000],[267 Mbit/s],
+		link("https://www.nasa.gov/missions/psyche-mission/nasas-optical-comms-demo-transmits-data-over-140-million-miles/")[Psyche],[226000000],[25 Mbit/s],
+		link("https://www.spacedaily.com/reports/Communications_system_achieves_fastest_laser_link_from_space_yet_999.html")[TBIRD],[482.803],[100 Gbit/s],
+		link("https://www.nasa.gov/missions/tech-demonstration/laser-communications-relay/historic-demonstration-proves-laser-communication-possible/")[LLCD],[384400],[662 Mbit/s],
+	)
+) <Table::htmq-optical-tests>
+
+From these tests, we can produce a very rough model for transmission distance vs data rate, shown in @Figure::htmq-data-rate-estimation. This model not entirely accurate, as more tests are needed to determine the actual characteristics of the optical links in space to space communication.
+
+#figure(
+	image("figures/htmq/htmq-data-rate-estimation.svg"),
+	caption: [Model of the expected distance between nodes to data rate ratio.],
+) <Figure::htmq-data-rate-estimation>
+
+Using the model in @Figure::htmq-data-rate-estimation, we can estimate the data rate of the HTMQ network over time, shown in @Figure::htmq-data-rate.
+
+#figure(
+	image("figures/htmq/htmq-data-rate.svg"),
+	caption: [Estimated data rate of the HTMQ network over time.],
+) <Figure::htmq-data-rate>

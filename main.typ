@@ -9,6 +9,7 @@
 #include "cover.typ"
 
 #set heading(numbering: "1.")
+#set page(numbering: "1")
 
 #metadata("!glossary:enable")
 #include "abstract.typ"

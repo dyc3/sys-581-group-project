@@ -40,18 +40,17 @@
       }
     }
 
+    index(lower(word))
     // Insert an invisible char into the word to prevent show from looping on itself
     let printableWord = word.first() + "‎" + word.slice(1)
     if enabled {
       return {
         show link: set underline(stroke: 0pt)
         link(label("glossary"), text(style: "italic", fill: rgb("#00612d"), printableWord))
-        index(lower(printableWord))
       }
     } else {
       return {
         text(printableWord)
-        index(lower(printableWord))
       }
     }
   })

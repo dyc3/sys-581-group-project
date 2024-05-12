@@ -214,13 +214,7 @@ This configuration has several benefits:
 - Lower priority traffic can be sent along unoptimal routes #index[route] while still making progress to the destination #index[destination].
 - The shorter transmission distances allows for the highest possible data transfer rate with the least error rate, and the least amount of power consumption.
 
-== Verification
-
-It is necessary to verify that the HTMQ subsystem will function correctly in the context of the overall system. This can be done through a combination of simulation and testing. The HTMQ can be simulated using a network simulator that models the behavior of the laser links and the message queues. This simulation can be used to test the performance of the HTMQ under different conditions, such as high traffic loads or node failures. Additionally, the HTMQ can be tested using a hardware-in-the-loop testbed that simulates the laser links and the message queues. This testbed can be used to verify that the HTMQ can handle the data transfer requirements.
-
-NASA is planning to perform a test of optical communications between Earth and the Moon in 2025, called "Orion Artemis II Optical Communications System (O2O)". @NASAOrionArtemisII2024 This will verify whether or not optical communications can be used for long-range communication in space.
-
-=== Simulations
+== Simulations
 
 We performed a functional simulation of the HTMQ network to determine the expected performance of the system. The simulated timespan was from 2028 to 2032, using the proposed network configuration in @Section::htmq-deploy.
 
@@ -239,7 +233,7 @@ At the time of writing, there have been a few real world tests of optical commun
 		[Test], [Distance (km)], [Data Rate (bit/s)],
 		link("https://www.jpl.nasa.gov/news/nasas-tech-demo-streams-first-video-from-deep-space-via-laser")[Taters],[31000000],[267 Mbit/s],
 		link("https://www.nasa.gov/missions/psyche-mission/nasas-optical-comms-demo-transmits-data-over-140-million-miles/")[Psyche],[226000000],[25 Mbit/s],
-		link("https://www.spacedaily.com/reports/Communications_system_achieves_fastest_laser_link_from_space_yet_999.html")[TBIRD],[482.803],[100 Gbit/s],
+		link("https://ntrs.nasa.gov/api/citations/20210026855/downloads/spie2022-tbird-v1.pdf")[TBIRD @schieler2022200],[482.803],[200 Gbit/s],
 		link("https://www.nasa.gov/missions/tech-demonstration/laser-communications-relay/historic-demonstration-proves-laser-communication-possible/")[LLCD],[384400],[662 Mbit/s],
 	)
 ) <Table::htmq-optical-tests>

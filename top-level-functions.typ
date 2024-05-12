@@ -5,7 +5,7 @@ Our system must be able to perform these functions in order to accomplish our mi
 + *Command & Control:* The C3 system must be able to send commands to and receive data from manned and unmanned missions to Mars. This includes the ability to send commands to rovers, satellites, and other equipment on the Martian surface.
 + *Intracolony Communication*: The C3 system must provide a means for colonists to communicate with each other. This includes voice, video, documents, and text communication.
 
-This is broken down further in @Figure::functional-breakdown
+This is broken down further in @Figure::functional-breakdown.
 
 #figure(
 	image("figures/functional-breakdown.svg"),

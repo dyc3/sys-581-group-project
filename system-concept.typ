@@ -37,3 +37,32 @@ At a high level, there are a few different architectures that we could pursue.
 	#include "system-overview.typ"
 	#pagebreak()
 ]
+
+== System Interactions
+
+Our system is composed of several subsystems that interact with each other to accomplish the mission, shown in @Table::interactions-internal. Additionally, our system interacts with external systems and the environment to achieve its goals, shown in @Table::interactions-external.
+
+#figure(
+  table(
+		columns: 4,
+    [Source Subsystem], [Interface], [Destination Subsystem], [Purpose],
+    [HTMQ], [HTMQ Dispatcher], [IP Network], [Deliver messages to services on the IP network],
+    [IP Network], [HTMQ Dispatcher], [HTMQ], [Queue messages to be delivered on the HTMQ network],
+    [SRR], [Radio Transceiver], [IP Network], [Record audio/video logs to the IP network's storage],
+  ),
+  caption: [Internal Subsystem Interactions],
+) <Table::interactions-internal>
+
+#figure(
+  table(
+		columns: 4,
+    [Subsystem], [Interface], [External System], [Purpose],
+    [(All subsystems)], [Electrical], [Power], [Required for operation],
+    [IP Network], [Internet Protocol], [Water], [Monitoring subsystems will be colocated on the same network],
+    [IP Network], [Internet Protocol], [Habitat], [Monitoring subsystems will be colocated on the same network],
+    [IP Network], [Physical], [Habitat], [Equipment will be deployed inside the habitat],
+    [SRR], [Physical], [Habitat], [Main transceiver will be deployed on the habitat],
+		[DSP], [RF Signal], [Spacecraft], [Command and Control (Primary purpose)]
+  ),
+  caption: [External System Interactions],
+) <Table::interactions-external>

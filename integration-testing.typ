@@ -21,3 +21,18 @@ Some tests have already been conducted that make us very confident that we will 
 NASA is also planning some additional tests around optical laser links in space. They are planning to perform a test of optical communications between Earth and the Moon in 2025, called "Orion Artemis II Optical Communications System (O2O)". @NASAOrionArtemisII2024 This will verify whether or not optical communications can be used for long-range communication in space.
 
 To test the computational aspects of the system, the HTMQ can be simulated using a network simulator that models the behavior of the laser links and the message queues. This simulation can be used to test the performance of the HTMQ under different conditions, such as high traffic loads or node failures. Additionally, the HTMQ can be tested using a hardware-in-the-loop testbed that simulates the laser links and the message queues. This testbed can be used to verify that the HTMQ can handle the data transfer requirements.
+
+=== Other Subsystems and Components
+
+The DSP system uses primarily preexisting technologies, and as such, the feasibility of the system is not in question. The system uses already established infrastructure, such as the Deep Space Network, which is already proven to work in the field.
+
+The IP network uses commercial off the shelf hardware, can be easily verified by setting up the equipment and testing the network, as the deployment of the hardware won't change between Earth and Mars. The network can be tested for performance, reliability, and security using conventional stress and penetration testing techniques.
+
+The SRR subsystem can be tested by creating a test enclosure that simulates the conditions on Mars.
+
+One example of a full system integration test would be to see if the system can record SRR transmissions and have them end up in Mission Control's storage. This would involve the following steps:
++ Having the system record some SRR transmissions
++ Assert that the recorded transmissions are stored in the IP Network's storage
++ Send that recording the the HTMQ dispatcher
++ Receive the recording on the Mission Control side
++ Assert that the recording's integrity is intact

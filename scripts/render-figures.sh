@@ -31,7 +31,11 @@ fi
 # done
 
 echo "Rendering Mermaid figures..."
-time find ./figures -type f -name "*.mmd" | parallel mmdc -i "{}" -c ./figures/mermaid.json -o "{.}.svg"
+time find ./figures -type f -name "*.mmd" | parallel mmdc -i "{}" -c ./figures/mermaid.json -o "{.}.pdf --pdfFit"
+time find ./figures -type f -name "*.pdf" | parallel mutool draw -o "{.}.svg" "{}"
+time find ./figures -type f -name "*.pdf" | parallel rm "{}"
+# Rename files ending in *1.svg to *.svg
+find ./figures -type f -name "*1.svg" -exec sh -c 'mv "$0" "${0%1.svg}.svg"' {} \;
 
 if [[ ! -f plantuml.jar ]]; then
 	echo "plantuml.jar could not be found, downloading..."

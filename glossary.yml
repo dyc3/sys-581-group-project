@@ -6,3 +6,27 @@ DSP:
   definition: Data Streaming Protocol - A subsystem of the Mars C3 System
 Mars:
   definition: The fourth planet from the Sun.
+Earth:
+  definition: The third planet from the Sun. You are probably here.
+SRR:
+  definition: Short Range Radio - A subsystem of the Mars C3 System
+IP:
+  definition: Internet Protocol - A protocol for sending data over the Internet.
+must:
+  definition: A requirement that must be satisfied.
+should:
+  definition: A requirement that should be satisfied, but is not mandatory for overall success.
+packet:
+  definition: A small unit of data transmitted over a network.
+telemetry:
+  definition: The process of recording and transmitting the readings of an instrument or diagnostic information.
+"data rate":
+  definition: The speed at which data is transferred from one device to another. This does not include latency caused by the speed of light or the network.
+intracolony:
+  definition: Within the colony.
+interplanetary:
+  definition: Between planets.
+latency:
+  definition: The time it takes for data to travel from one point to another.
+RF:
+  definition: Radio Frequency - A range of electromagnetic frequencies used for communication.

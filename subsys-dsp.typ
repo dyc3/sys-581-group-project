@@ -42,6 +42,10 @@ The DSP is designed to seamlessly interface with existing network infrastructure
 
 Due to the low transmission power of probes, the DSP is engineered to be robust against packet loss and signal degradation. This ensures reliable communication even in challenging environmental conditions.
 
+== Command Transmission
+
+The DSP subsystem utilizes NASA's Deep Space Network (DSN) satellite arrays to transmit commands to probes. The DSP is composed of three sophisticated ground-based antennas located strategically around Earth. It enables the DSP subsystem to maintain robust and reliable communication channels across the interplanetary distances involved. Commands are first sent to the gateway satellites in orbit around Earth. Commands will hop from these gateway satellites to relay satellites and finally to the space probe the command is meant for. The DSN also provides two way communication between Earth based equipment and probes, which allows NASA to track them with a high degree of accuracy.
+
 == Packet Structure
 
 Communication in the DSP is packet-based. Each packet consists of a header and a payload. The header contains essential information such as packet type and length. The payload carries the actual data or command being transmitted.

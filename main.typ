@@ -35,11 +35,7 @@
 #pagebreak()
 #include "integration-testing.typ"
 #pagebreak()
-#include "acceptance-plan.typ"
-#pagebreak()
 #include "system-robustness.typ"
-#pagebreak()
-#include "subsys-srr.typ"
 #pagebreak()
 
 #metadata("!glossary:disable")

@@ -1,0 +1,27 @@
+flowchart TD
+    C3 --> interplanet[Interplanetary\n Communication]
+    C3 --> intracolony[Intracolony\n Communication]
+    C3 --> cc[Command\n and Control]
+
+    interplanet --> deliver[Deliver\n Messages]
+    interplanet --> conns[Manage Connections\nWith Other Nodes]
+    deliver --> optictransmit["Transmit Data\n (Optical)"]
+    deliver --> opticrecv["Receive Data\n (Optical)"]
+    deliver --> route[Route\n Messages]
+    deliver --> retry[Retry Msg\n Delivery]
+    conns --> align[Align\n Optical Links]
+    conns --> keyex[Exchange\n Encryption Keys]
+
+    cc --> command[Issue Commands]
+    cc --> monitor[Monitor Telemetry]
+    monitor --> rfrecv["Receive Data\n (RF)"]
+    command --> rftransmit["Transmit Data\n (RF)"]
+
+    intracolony --> srr[Short Range\n Comms]
+    intracolony --> store[Store Files]
+    intracolony --> read[Retrieve Files]
+    srr --> rftransmit
+    srr --> rfrecv
+
+    opticrecv --> error[Error Correction]
+    rfrecv --> error

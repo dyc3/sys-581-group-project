@@ -28,3 +28,9 @@ The Mars C3 system must meet the following key functional requirements:
 
 	#include "stakeholders.typ"
 ]
+
+== Primary System Features
+
+The C3 communication system was designed with multiple features to meet the varied requirements of communication between Earth and Mars. At it's core, we have an advanced orbital satellite network for global coverage and constant connectivitiy. This is crucial for high-speed data transfer and real-time communication. Each planet has ground-based deep space communication arrays, which manage large amounts of data and transmit commands. Both the HTMQ and DSP will use this satellite network.
+
+The SRR and IP subsystem are significantly more simple. The SRR is a standalone system. Colonists on Mars will have both a handheld radio, and a built in radio tuned to the same frequency as the handhelds in their space suits. It will use an UHF frequency band to try maximize the effective range. The IP subsystem is essentially an internet network on Mars. It is directly analogous to the internet on planet Earth. The IP network will be capable of interfacing with the HTMQ to both send and receive messages.

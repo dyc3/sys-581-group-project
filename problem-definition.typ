@@ -27,5 +27,4 @@ The Mars C3 system must meet the following key functional requirements:
 	#set heading(offset: 1)
 
 	#include "stakeholders.typ"
-	#pagebreak()
 ]

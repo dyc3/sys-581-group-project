@@ -10,8 +10,8 @@ Functional software problems are addressed through emergency software updates to
 There are several risks that could arise when deploying the C3 system, mainly in the HTMQ subsystem. Since the nodes in the HTMQ are deployed in orbit around the sun, there is a significantly high risk of blackout periods due to obstruction. If too few nodes are deployed than there is a high probability of that the system would slow and unreliable. When establishing connections in the DSP, data integrity could be compromised when a handshaking process is not in place. The commercial hardware used for the system might not be optimized for power efficiency. Finally, noise and atmospheric disturbances can greatly affect transmission of data in the optical laser links as well as the SRR subsystem. 
 
 #figure(
-	image("figures/stoplight_matrix.png"),
-	caption: [A comprehensive visualization of the probable impact and likelihood of each risk. @biswas2003deep],
+	image("figures/Stoplight-Matrix.svg"),
+	caption: [A comprehensive visualization of the probable impact and likelihood of each risk.],
 ) <Figure::stoplight-matrix>
 == Mitigations
 To mitigate the risk of blackout periods, each node would be equipped with storage drives to store messages during blackout periods. The nodes would employ store and forward protocols to ensure all messages are sent, even if they take a while. If not enough nodes are provided, system monitoring would be implemented to measure performance and identify key issues proactively. Load balancing algorithms would also be integrated to distribute message queuing across nodes to prevent congestion. To mitigate potentially compromising data integrity in the DSP, error correction algorithms would be integrated. Mitigating the risk of unpotimized power efficiency in commercial hardware would involve prioritizing the acquisition of low-power variants of the hardware. Finally, reducing noise and atmospheric disturbances would involve increasing the power of the optical laser when initiating the first node-link up and installing bandpass filters and optical filters to reject undesired frequencies.

@@ -4,9 +4,11 @@
 = Short Range Radio (SRR)
 
 The Short Range Radio (SRR) is the system used to let colonists speak to each other on the colony. The goal of this system to enable colonists to have reliable communication amongst themselves in any conditions at long-distance so that missions can be conducted on the surface without being directly next to each other. The focus is reliability, as being able to talk during missions is as vital as a life support system. It will utilize commonly used radio equipment that is slightly modified to better fit the use-case of an interplanetary mission.
+
 == Architecture
 
 The overview of the SRR is similar to a commonly found short range radio communication system on Earth. Each colonist will have a walkie-talkie device equipped with an omni-directional transceiver in the form of a whip antenna. This will allow them to communicate by sending voice messages up to 6 miles away. However, we also plan to send the colonists with a separate transceiver that can be attached to the tallest point on the base, which can allow voice messages to be sent to other colonists at a range of 15-20 miles. The biggest limiting factor is the height of the transceivers, but by using the UHF (ultra high frequency) band as the communication medium, we hope to keep the range as far as physically possible.
+
 === Alternatives Considered
 
 For short range communication, alternatives include physical conversation (no technology required), or creating an entire novel method of communication.
@@ -14,7 +16,6 @@ For short range communication, alternatives include physical conversation (no te
 The alternatives have huge issues, though. Physical conversation is implausible as there needs to be more distance than immediate arms-length to allow for conversation for missions and communication across the colony. A novel method may have a better upside of range, but to create an entire novel SRR system would greatly risk the reliability necessary for the system. It is also extremely implausible to create an entire new methodology within an already high-risk mission.
 
 As a result, we did not believe a Pugh matrix was necessary to showcase that, of all possibilities, using established radio technology is most definitely the way to go.
-
 
 == Handheld Radio Devices
 
@@ -47,7 +48,6 @@ These waves travel the best in line-of-sight applications, and hold a better acc
 A further, and much more critical concern, with using traditional lower-range high frequency, or HF, waves is that they work by bouncing off the ionosphere of Earth to travel long distance. The ionosphere of Mars is thinner, and will not perform nearly as well as it will on Earth. Mars is also covered in a layer of iron, which will greatly impede the radio transmission distance and accuracy of the transmission using these waves.
 
 As a result, the UHF waves provide the best middle-ground of being compatible with the environment and being very easy to set up and use.
-
 
 == Interactions with Other Systems
 

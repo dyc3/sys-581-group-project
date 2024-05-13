@@ -1,4 +1,4 @@
-= Top Level Functions
+= Top Level Functions <Section::top-level-functions>
 
 Our system must be able to perform these functions in order to accomplish our mission:
 + *Interplanetary Communication*: The primary function of the C3 system is to facilitate the exchange of messages and data across vast interplanetary distances. This system ensures that crucical information can be transmitted reliably to and form Earth.

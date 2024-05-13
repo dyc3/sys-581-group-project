@@ -7,15 +7,15 @@ As specified in @Section::top-level-functions, the C3 system has to perform thre
 To accomplish this, we have devised four major subsystems that work together to achieve these functions. These subsystems are the High Throughput Message Queue (HTMQ), the Data Streaming Protocol (DSP), the Short Range Radio (SRR), and the Internet Protocol (IP) network. Each of these subsystems has a specific role to play in the overall system, and they work together to ensure that the C3 system can meet the needs of the Mars colony.
 
 #figure(
-  table(
+	table(
 		columns: 3,
-    [Subsystem], [Purpose], [Top Level Function],
-    [HTMQ], [Allows messages to be sent across the solar system within range of the satellite network], [Deliver messages between Earth and Mars],
-	[DSP], [Manages the metrics and commands sent between Earth and Mars], [Command manned and unmanned missions from Earth],
-    [IP Network], [Provides a means for colonists to communicate with each other and interact with the HTMQ], [Allow for interpersonal communication on the colony],
-    [SRR], [Allows colonists to communicate with each other and with the colony], [Allow for interpersonal communication on the colony],
-  ),
-  caption: [Subsystems to Functions],
+		[Subsystem], [Purpose], [Top Level Function],
+		[HTMQ], [Allows messages to be sent across the solar system within range of the satellite network], [Deliver messages between Earth and Mars],
+		[DSP], [Manages the metrics and commands sent between Earth and Mars], [Command manned and unmanned missions from Earth],
+		[IP Network], [Provides a means for colonists to communicate with each other and interact with the HTMQ], [Allow for interpersonal communication on the colony],
+		[SRR], [Allows colonists to communicate with each other and with the colony], [Allow for interpersonal communication on the colony],
+	),
+	caption: [Subsystems to Functions],
 ) <Table::subsystems-to-functions>
 
 == Key Subsystems Interfaces
